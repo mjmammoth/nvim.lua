@@ -10,6 +10,10 @@ require'nvim-treesitter.configs'.setup {
   auto_install = true,
   ignore_install = { "sql" },
 
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+  },
   highlight = {
     -- `false` will disable the whole extension
     enable = true,
