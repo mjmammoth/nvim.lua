@@ -1,6 +1,6 @@
 require("zen-mode").setup {
     window = {
-        width = 90,
+        width = 130,
         options = {
             number = true,
             relativenumber = true,
