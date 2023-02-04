@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
   use('wakatime/vim-wakatime')
   use('ellisonleao/glow.nvim')
   use('lewis6991/gitsigns.nvim')
+  use('ojroques/nvim-osc52')
 
   use({'nvim-treesitter/nvim-treesitter', run = function()
       local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
