@@ -3,7 +3,10 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
+  'marksman',
+  'yamlls',
+  'pylsp',
+  'bashls',
   'eslint',
   'sumneko_lua',
   'rust_analyzer',
