@@ -19,7 +19,11 @@ return require('packer').startup(function(use)
   use('ellisonleao/glow.nvim')
   use('lewis6991/gitsigns.nvim')
 
-  use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
+  use({'nvim-treesitter/nvim-treesitter', run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
+  })
   use('nvim-treesitter/playground')
   use('mrjones2014/nvim-ts-rainbow')
   use('theprimeagen/harpoon')
