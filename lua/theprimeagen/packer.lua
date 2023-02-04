@@ -20,11 +20,7 @@ return require('packer').startup(function(use)
   use('lewis6991/gitsigns.nvim')
   use('ojroques/nvim-osc52')
 
-  use({'nvim-treesitter/nvim-treesitter', run = function()
-      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-      ts_update()
-    end,
-  })
+  use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('mrjones2014/nvim-ts-rainbow')
   use('theprimeagen/harpoon')
@@ -57,6 +53,10 @@ return require('packer').startup(function(use)
 	  }
   }
 
+  use {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig"
+  }
   use("folke/zen-mode.nvim")
   use("github/copilot.vim")
   use('eandrju/cellular-automaton.nvim')
