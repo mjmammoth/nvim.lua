@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
+  use("nvim-treesitter/nvim-treesitter-context")
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -53,14 +54,11 @@ return require('packer').startup(function(use)
 	  }
   }
 
-  use {
-    "SmiteshP/nvim-navic",
-    requires = "neovim/nvim-lspconfig"
-  }
   use("folke/zen-mode.nvim")
   use("github/copilot.vim")
   use('eandrju/cellular-automaton.nvim')
-
+  use("laytan/cloak.nvim")
+  use("akinsho/toggleterm.nvim")
 --  use {
 --    "mfussenegger/nvim-dap",
 --    opt = true,
