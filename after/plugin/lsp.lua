@@ -4,7 +4,6 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
   'marksman',
-  'yamlls',
   'pylsp',
   'bashls',
   'eslint',
@@ -54,8 +53,6 @@ lsp.set_preferences({
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
-  local navic = require("nvim-navic")
-  navic.attach(client, bufnr)
   if client.name == "eslint" then
       vim.cmd.LspStop('eslint')
       return
